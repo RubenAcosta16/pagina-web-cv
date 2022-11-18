@@ -84,6 +84,7 @@ a{
     left:0;
 
     /* transition: display .3s; */
+    padding: 25px 70px;
 }
 
 .anotaciones-active{
