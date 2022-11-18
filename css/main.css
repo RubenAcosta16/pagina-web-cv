@@ -1,0 +1,92 @@
+:root{
+    --theme-color:#fff;
+    --primary-color:#124f88;
+    --secondary-color:#f7c331;
+    --text-color-inverse:#fff;
+    --text-color:#000;
+    --navbar-shallow-color:#e5e5e5;
+    --menu-mobile-background-color:#3a4460;
+
+}
+
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--theme-color);
+    color:var(--text-color);
+    padding-top: 70px;
+}
+
+html{
+    /* el scroll en la barra nav no es de golpe */
+    scroll-behavior: smooth;
+}
+
+/* todos los section con id */
+section[id]{
+    /* cuando le des en la barra y te mande a esa parte de la pagina, la barra fixed tapa parte del contenido, esto lo arregla */
+    scroll-margin-top: 70px;
+}
+
+a{
+    text-decoration: none;
+    color:var(--text-color);
+}
+
+.vertical-padding{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.horizontal-padding{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+@media(min-width:950px){
+    .vertical-padding{
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    
+    .horizontal-padding{
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}
+
+
+
+
+
+.anotaciones-container{
+    padding: 70px;
+}
+
+.anotaciones-btn{
+    border: none;
+    background-color: var(--text-color);
+    color: var(--text-color-inverse);
+    border-radius: 7px;
+    cursor: pointer;
+
+
+}
+
+.anotaciones-btn:hover{
+    box-shadow: 0 0 14px var(--secondary-color);
+}
+
+.anotaciones{
+    display: none;
+    position:absolute;
+    /* top: 0; */
+    left:0;
+
+    /* transition: display .3s; */
+}
+
+.anotaciones-active{
+    display: block;
+    /* top:100%; */
+}

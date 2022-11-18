@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina css</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/experiences.css">
+    <link rel="stylesheet" href="css/contact.css">
+
+    <script src="https://kit.fontawesome.com/8959affc19.js" crossorigin="anonymous"></script>
+
+    <!-- el defer es que se cargue el script despues de que cargue el dom, es igual que poner el script al final del body -->
+    <script defer src="./js/app.js"></script>
+</head>
+
+<body>
+    <header class="topheader">
+        <nav class="topnav">
+            <a href="#" class="logo">
+                <img height="50px" src="https://static-00.iconduck.com/assets.00/layout-grid-3x3-icon-512x512-1gz5wevr.png" alt="programador">
+                <div>
+                    Ruben Acosta {codee}
+                </div>
+            </a>
+            <button class="open-menu" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="menu">
+                <button class="close-menu" aria-label="Cerrar menú">
+                    <i class="fa-solid fa-xmark"></i>
+                </button> 
+                
+                <li><a href="#profile" class="selected">Perfil</a></li>
+                <li><a href="#experiences">Experiencia</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="horizontal-padding vertical-padding">
+        <section class="profile" id="profile">
+            <div class="profile-info">
+                <h1 class="profile-title">Hola soy <br>Ruben Acosta</h1>
+                <p class="profile-details">
+                    Hola me interesa aprender programacion web asi que aqui andamos, diria que tengo experiencia en lenguajes de programacion como java, html, css y javascript
+                </p>
+                <button class="profile-btn">
+                    Descargar cv
+                </button>
+            </div>
+            <span class="profile-img-section">
+                <img class="profile-img" src="https://pm1.narvii.com/6609/0127cd477da72e9e048a6b56090c68d0bc7460fd_hq.jpg" alt="Programador">
+                <div class="profile-img-line"></div>
+            </span>
+        </section>
+    </div>
+    <p>Mobile first??</p>
+
+
+
+    <section class="experiences" id="experiences">
+        <img src="./img/wave.svg" alt="" class="wave">
+        <div class="experiences-body">
+            <h2 class="experiences-tittle">Experiencia</h2>
+            <div class="experiences-grid">
+                <div class="empty"></div>
+                <div class="line"></div>
+
+                <div class="experience">
+                    <div class="experience-date">2020</div>
+                    <div class="experience-company">Mi casa</div>
+                    <div class="experience-position">Aprender</div>
+                    <div class="experience-description">Aprendi html en la cuarentena</div>
+                </div>
+
+
+                <div class="experience experience_left">
+                    <div class="experience-date">2020</div>
+                    <div class="experience-company">Casa</div>
+                    <div class="experience-position">Aprender</div>
+                    <div class="experience-description">Aprendi css</div>
+                </div>
+
+                
+                <div class="line"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="line"></div>
+
+
+                <div class="experience">
+                    <div class="experience-date">2020</div>
+                    <div class="experience-company">Casa</div>
+                    <div class="experience-position">Creador</div>
+                    <div class="experience-description">Cree una pagina web</div>
+                </div>
+
+                
+
+                <div class="experience  experience_left">
+                    <div class="experience-date">2021</div>
+                    <div class="experience-company">Casa</div>
+                    <div class="experience-position">Aprender</div>
+                    <div class="experience-description">Aprendi javascript</div>
+                </div>
+
+                <div class="line"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="line"></div>
+
+                <div class="experience">
+                    <div class="experience-date">2022</div>
+                    <div class="experience-company">Escuela</div>
+                    <div class="experience-position">Estudio</div>
+                    <div class="experience-description">Me gradue del cetis</div>
+                </div>
+
+                <div class="experience  experience_left">
+                    <div class="experience-date">2022</div>
+                    <div class="experience-company">Casa</div>
+                    <div class="experience-position">Aprender</div>
+                    <div class="experience-description">Hice mi segunda pagina web de <a href="https://rubenacosta.netlify.app/" target="_blank">Verbos</a></div>
+                </div>
+
+                <div class="line"></div>
+                <div class="empty"></div>
+            </div>
+        </div>
+        <img src="./img/wave.svg" alt="" class="wave wave_bottom">
+    </section>
+
+
+    <div class="horizontal-padding vertical-padding">
+        <section class="skills" id="skills">
+            <h2 class="skills-title">Habilidades</h2>
+            <ul class="skills-list">
+                <li class="skills-skill">HTML</li>
+                <li class="skills-skill">CSS</li>
+                <li class="skills-skill">Javascript</li>
+                <li class="skills-skill">Java</li>
+            </ul>
+        </section>
+    </div>
+
+
+    <div class="horizontal-padding vertical-padding">
+        <section class="contact" id="contact">
+            <h2 class="contact-title">Contacto</h2>
+            <div class="contact-details">
+                <div class="contact-details-group">
+                    <p class="contact-label">Direccion:</p>
+                    <p class="contact-text">Chihuahua, chihuahua</p>
+                </div>
+                <div class="contact-details-group">
+                    <p class="contact-label">Email:</p>
+                    <p class="contact-text">1511ruben@gmail.com</p>
+                </div>
+                <div class="contact-details-group">
+
+                    <p class="contact-text">Deja tu mensaje</p>
+                </div>
+            </div>
+            <form action="" class="contact-form">
+                <div class="contact-form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" required id="name">
+                </div>
+                <div class="contact-form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" required id="email">
+                </div>
+                <div class="contact-form-group">
+                    <label for="messaje">Mensaje</label>
+                    <textarea name="messaje" required id="messaje" cols="" rows="6"></textarea>
+                </div>
+
+                <button type="submit" class="contact-form-submit">Enviar</button>
+            </form>
+
+            
+            
+            
+            
+
+            <nav class="social">
+                <ul class="social-list">
+                    <li class="social-item">
+                        <a href="#" alt="twiter profile"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li class="social-item">
+                        <a href="#" alt="youtube profile"><i class="fa-brands fa-youtube"></i></a>
+                    </li>
+                    <li class="social-item">
+                        <a href="#" alt="github profile"><i class="fa-brands fa-github"></i></a>
+                    </li>
+                    <li class="social-item">
+                        <a href="#" alt="linkedin profile"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </div>
+
+    <div class="anotaciones-container">
+
+        <button class="anotaciones-btn">Anotaciones</button>
+        <div class="anotaciones">
+            <p>border-box en box-sizing contempla el tamaño del contenido contando los padding, y content-box solo cuenta el contenido ignorando el padding</p>
+            <p>flex tambien usa gap</p>
+            <p>en el grid como en la seccion contact donde declaro las secciones si pongo un . es una seccion vacia</p>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>

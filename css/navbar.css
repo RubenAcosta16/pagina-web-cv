@@ -1,0 +1,181 @@
+.topheader{
+    box-shadow: 0 4px 5px var(--navbar-shallow-color);
+    position: fixed;
+    background-color: var(--theme-color);
+    /* importante esto de left y top */
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    /* es para que la imagen no este arriba del nav */
+    z-index: 100;
+}
+
+.topnav{
+    display: flex;
+    justify-content: space-between;
+
+    padding: 10px;
+
+
+    /* esto primero le da el ancho maximo al nav clase topnav que esta dentro de header, y lo otro lo centra,  */
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+/* logo */
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary-color);
+
+
+}
+
+.logo img{
+    border-radius: 30px;
+    margin: 0 5px;
+}
+
+
+/* menu */
+
+.menu{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.menu li{
+    padding: 0 15px;
+}
+
+.menu a{
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 50px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.menu a::after{
+    /* siempre poner content sino no se ve */
+    content: "";
+    background-color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    top: calc(100% + 4px);
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.menu a.selected::after, .menu a:hover::after{
+    opacity: 0.8;
+}
+
+.menu a:hover{
+    color: var(--primary-color);
+}
+
+.open-menu, .close-menu{
+    display: none;
+}
+
+
+
+@media (max-width:950px){
+    
+    
+    /* menu */
+    
+    .menu{
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        align-items: center;
+        background-color: var(--menu-mobile-background-color);
+        height: 100%;
+        /* esto cuando no hay espacio en el eje y le pone automaticamente una barra scroll */
+        overflow-y: auto;
+
+        opacity: 0;
+        /* no se puede hacer click con esto */
+        pointer-events: none;
+
+        transition: opacity .3s;
+    }
+    
+    .menu li{
+        padding: 0;
+
+    }
+    
+    .menu a{
+        color: var(--text-color-inverse);
+        line-height: 70px;
+        font-size: 25px;
+    }
+    
+    
+    .open-menu, .close-menu{
+        display: block;
+        /* esto quita estilos boton */
+        border: none;
+        background: none;
+        cursor: pointer;
+
+    }
+
+    .close-menu{
+        align-self: flex-end;
+
+        font-size: 60px;
+        color: #fff;
+
+        padding: 3px 17px;
+    }
+
+    .open-menu{
+        font-size: 45px;
+    }
+
+/* esto hace que se vea el memu */
+    .menu_opened{
+        opacity: 1;
+        /* vuelve el click */
+        pointer-events: all;
+    }
+
+    .open-menu:focus:not(:focus-visible),
+    .close-menu:focus:not(:focus-visible){
+        outline: none;
+    }
+
+
+
+/* menu ::after */
+
+    .menu a::after{
+        /* esto quita el content asi que quita las lineas y todo el after */
+        content: none;
+
+    }
+    
+    .menu a.selected, .menu a:hover{
+        color: var(--secondary-color);
+    }
+    
+
+
+}
