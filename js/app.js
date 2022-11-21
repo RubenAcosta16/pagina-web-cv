@@ -54,4 +54,4 @@ const anotaciones_btn= document.querySelector(".anotaciones-btn");
 
 anotaciones_btn.addEventListener("click",()=>{
     anotaciones.classList.toggle("anotaciones-active")
-})
+});

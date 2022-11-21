@@ -1,5 +1,5 @@
 .topheader{
-    box-shadow: 0 4px 5px var(--navbar-shallow-color);
+    box-shadow: var(--navbar-shadow);
     position: fixed;
     background-color: var(--theme-color);
     /* importante esto de left y top */
@@ -23,6 +23,35 @@
     margin: 0 auto;
 }
 
+
+.dark-mode-btn,
+.light-mode-btn{
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    margin-left: 20px;
+    margin-right: 20px;
+
+    font-size: 23px;
+
+}
+
+/* Si el data.theme es light oculta ese boton */
+:root[data-theme="light"] .dark-mode-btn{
+    display: none;
+}
+
+:root[data-theme="dark"] .light-mode-btn{
+    display: none;
+}
+
+
+
 /* logo */
 
 .logo{
@@ -30,9 +59,10 @@
     align-items: center;
     font-size: 18px;
     font-weight: 500;
-    color: var(--primary-color);
+    color: var(--accent-color);
 
-
+    /* esto empujo los botones del tema oscuro a la derecha */
+    margin-right: auto;
 }
 
 .logo img{
@@ -78,12 +108,12 @@
     transition: opacity 0.3s;
 }
 
-.menu a.selected::after, .menu a:hover::after{
+.menu a.selected::after{
     opacity: 0.8;
 }
 
 .menu a:hover{
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 .open-menu, .close-menu{
@@ -135,6 +165,8 @@
         background: none;
         cursor: pointer;
 
+        color: var(--text-color);
+
     }
 
     .close-menu{
@@ -177,5 +209,11 @@
     }
     
 
+    .dark-mode-btn,
+    .light-mode-btn{
 
+    
+        font-size: 25px;
+    
+    }
 }
