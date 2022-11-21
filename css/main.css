@@ -21,13 +21,15 @@
     :root[data-theme="dark"]{
         --theme-color:#0f172a;
         --primary-color:#243043;
-        --secondary-color:#a7faf3;
+        /* --secondary-color:#a7faf3; */
+        --secondary-color:#f7c331;
         --text-color:rgba(255,255,255,.9);
         --text-color-inverse:var(--text-color);
         /* --navbar-shallow-color:#e5e5e5; */
         --menu-mobile-background-color:#18213e;
         
-        --accent-color:var(--secondary-color);
+        /* --accent-color:var(--secondary-color); */
+        --accent-color:#a7faf3;
         --navbar-shadow:0 1px rgba(51,65,85,.8);
         --tag-shadow:0 0 0 1px #fff;
 
