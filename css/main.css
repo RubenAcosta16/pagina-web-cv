@@ -21,7 +21,7 @@
     :root[data-theme="dark"]{
         --theme-color:#0f172a;
         --primary-color:#243043;
-        --secondary-color:#91faf1;
+        --secondary-color:#a7faf3;
         --text-color:rgba(255,255,255,.9);
         --text-color-inverse:var(--text-color);
         /* --navbar-shallow-color:#e5e5e5; */
